@@ -22,6 +22,13 @@ const pagesInput = document.getElementById("pages");
 const readCheckbox = document.getElementById("check");
 const tableBody = document.querySelector("#display tbody");
 
+const form = document.getElementById("book-form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  submit();
+});
+
 function submit() {
   // .value is always a string, never null
   const title = titleInput.value.trim();
